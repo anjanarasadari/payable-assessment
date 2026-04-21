@@ -1,0 +1,72 @@
+{
+  "info": {
+    "_postman_id": "47c6b5b7-93cb-4b88-8f45-cede57aa542f",
+    "name": "CSV",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "15695102"
+  },
+  "item": [
+    {
+      "name": "upload",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "913a3632-07a5-4464-be28-cc7e8d02f1f6",
+              "src": "/C:/Users/AnjanaGalappaththi/Downloads/Latest BIN List.xlsx"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/bin-master/upload",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "bin-master",
+            "upload"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "generate-csv",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "0da13357-965e-4fa4-8363-920f2ba44482",
+              "src": "/C:/Users/AnjanaGalappaththi/Downloads/sample_data_set.csv"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/transactions/generate-csv",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "transactions",
+            "generate-csv"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
